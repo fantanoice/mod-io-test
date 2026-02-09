@@ -54,3 +54,10 @@ assumption
 - "func will invoke 'callback' after 10 seconds in an async fashion"
 	- it will invoke the function asynchronously? or is the func also in a thread?
 - std::async is invoked on the line where you call std::future<T> foo
+
+future improvements:
+- rename and reorganise project and solution files (done in v0.1.1)
+- get CMake working
+- add more test cases (positive, negative, 0, INT_MAX, INT_MIN)
+- have main.cpp report the result of the async function, not have it reported inside the function
+- add some feedback while we wait the 10 seconds
