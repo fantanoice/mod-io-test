@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="async-functions/async-functions.vcxproj" Id="1d16ec68-ef30-46ca-b9c8-290a60387be5" />
+  <Project Path="console-application/console-application.vcxproj" Id="73fc2802-6d12-4f92-b3ac-cc54cc4bd6e5" />
+</Solution>
