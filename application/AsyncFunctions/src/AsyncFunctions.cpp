@@ -1,11 +1,7 @@
 #include <iostream>
 #include <future>
 #include <chrono>
-
-int ReturnValue(int value)
-{
-	return value;
-}
+#include "AsyncFunctions.h"
 
 enum class STATE : int
 {
@@ -14,21 +10,23 @@ enum class STATE : int
 	NON_BLOCK,
 };
 
-int LibraryAsyncFunction(int(*callback)(int), int value)
+namespace AsyncFunctions
 {
-	bool running = true;
-	std::future<int> asyncFunction;
-	STATE state = STATE::WAITING;
-	constexpr double TICK_SECONDS = 10;
-	const auto startTime = std::chrono::steady_clock::now();
-	int result = INT_MIN;
-	while(running)
+	int RunCallbackAfterTenSeconds(int(*callback)(int), int value)
 	{
-		switch (state)
+		bool running = true;
+		std::future<int> asyncFunction;
+		STATE state = STATE::WAITING;
+		constexpr double TICK_SECONDS = 10;
+		const auto startTime = std::chrono::steady_clock::now();
+		int result = INT_MIN;
+		std::cout << "Waiting 10 seconds..." << "\n";
+		while (running)
 		{
+			switch (state)
+			{
 			case STATE::WAITING:
 			{
-				std::cout << "Waiting..." << "\n";
 				const auto duration = std::chrono::duration<double>(std::chrono::steady_clock::now() - startTime);
 				if (duration.count() >= TICK_SECONDS)
 				{
@@ -56,13 +54,10 @@ int LibraryAsyncFunction(int(*callback)(int), int value)
 				}
 				break;
 			}
+			}
 		}
+
+		return result;
 	}
-
-	return result;
 }
 
-int main()
-{
-	LibraryAsyncFunction(&ReturnValue, 100);
-}
