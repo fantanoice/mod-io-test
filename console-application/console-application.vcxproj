@@ -79,7 +79,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>$(SolutionDir)AsyncFunctions\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)async-functions\AsyncFunctions\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -96,7 +96,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>$(SolutionDir)AsyncFunctions\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)async-functions\AsyncFunctions\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -111,7 +111,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>$(SolutionDir)AsyncFunctions\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)async-functions\AsyncFunctions\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,7 +128,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>$(SolutionDir)AsyncFunctions\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)async-functions\AsyncFunctions\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,7 +139,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\async-functions\application.vcxproj">
+    <ProjectReference Include="..\async-functions\async-functions.vcxproj">
       <Project>{1d16ec68-ef30-46ca-b9c8-290a60387be5}</Project>
     </ProjectReference>
   </ItemGroup>
