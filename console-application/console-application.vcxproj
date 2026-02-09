@@ -139,7 +139,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\application\application.vcxproj">
+    <ProjectReference Include="..\async-functions\application.vcxproj">
       <Project>{1d16ec68-ef30-46ca-b9c8-290a60387be5}</Project>
     </ProjectReference>
   </ItemGroup>
